@@ -17,6 +17,7 @@ typedef struct node_t{
     struct node_t* far_right;
     char token_instance[MAX_INSTANCE_TOKEN];  //printing token instance value
     char* token_id;
+    int token_ID; // for the tree to be able to evaluate it in semantics.
 }node_t;
 
 

@@ -137,6 +137,7 @@ node_t* B(){
 
             node_t*  B_tk_ptr_2 = createNode(' '); //create an empty node
             B_tk_ptr_2 -> token_id = strdup(tokenNames[tokens.tokenid]);  //getting token id
+            B_tk_ptr_2 -> token_ID = tokens.tokenid; // for the semantics
             strncpy(B_tk_ptr_2->token_instance, tokens.tokeninstance,MAX_INSTANCE_TOKEN );
             P->center = B_tk_ptr_2;
 
@@ -148,6 +149,7 @@ node_t* B(){
 
                 node_t*  B_tk_ptr_3 = createNode(' '); //create an empty node
                 B_tk_ptr_3 -> token_id = strdup(tokenNames[tokens.tokenid]);  //getting token id
+                B_tk_ptr_3 -> token_ID = tokens.tokenid; // for hte semantics
                 strncpy(B_tk_ptr_3->token_instance, tokens.tokeninstance,MAX_INSTANCE_TOKEN );
                 P->far_right = B_tk_ptr_3;
 
@@ -176,6 +178,7 @@ node_t* C(){
         node_t* c_token_ptr = createNode(' ');
         c_token_ptr->token_id = strdup(tokenNames[tokens.tokenid]);
         strncpy(c_token_ptr->token_instance, tokens.tokeninstance, MAX_INSTANCE_TOKEN);
+        c_token_ptr->token_ID= tokens.tokenid; // for the semantics evaluation
         P->left = c_token_ptr;
         //printf("!!!Token Instance: %s --%s \n", tokens.tokeninstance, c_token_ptr->token_instance );
         //printf("tokens.tokenid: %d---%s\n", tokens.tokenid, tokenNames[tokens.tokenid]);

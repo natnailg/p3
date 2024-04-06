@@ -27,11 +27,11 @@ void pre_order_traversal(node_t* root, int depth){
 //        printf("%*c %s, %s\n", depth * 3, ' ', root->token_id, root->token_instance);
 
         // we need to see if we encounter t1 and t2 toknes in the tree
-        if(root->token_id == 'T1 token'){
+        if(root->token_ID == 1){
             printf("%%s, %s\n",  root->token_id, root->token_instance);
         }
 
-        else if (root->token_id == "T2 token"){
+        else if (root->token_id == 2){
             printf("%s, %s\n", root->token_id, root->token_instance);
 
         }
