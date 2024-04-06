@@ -31,7 +31,7 @@ void pre_order_traversal(node_t* root, int depth){
             printf("%%s, %s\n",  root->token_id, root->token_instance);
         }
 
-        else if (root->token_id == 2){
+        else if (root->token_ID == 2){
             printf("%s, %s\n", root->token_id, root->token_instance);
 
         }
