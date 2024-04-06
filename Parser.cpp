@@ -229,6 +229,7 @@ node_t* E(){
 
         node_t* E_tk_ptr = createNode(' ');
         E_tk_ptr -> token_id = strdup(tokenNames[tokens.tokenid]);   //getting token id
+        E_tk_ptr->token_ID = tokens.tokenid; // this is for the semantics check
         strncpy(E_tk_ptr->token_instance, tokens.tokeninstance,MAX_INSTANCE_TOKEN );
         P-> left = E_tk_ptr;
 
@@ -243,6 +244,7 @@ node_t* E(){
 
         node_t* E_tk_ptr_2 = createNode(' ');
         E_tk_ptr_2 -> token_id = strdup(tokenNames[tokens.tokenid]);   //getting token id
+        E_tk_ptr_2-> token_ID = tokens.tokenid; // thi is for the semantics check
         strncpy(E_tk_ptr_2->token_instance, tokens.tokeninstance,MAX_INSTANCE_TOKEN );
         P-> left = E_tk_ptr_2;
 
@@ -264,6 +266,7 @@ node_t* F(){
 
         node_t* F_tk_ptr = createNode(' ');
         F_tk_ptr -> token_id = strdup(tokenNames[tokens.tokenid]);   //getting token id
+        F_tk_ptr->token_ID = tokens.tokenid; // this is for the semantics check;
         strncpy(F_tk_ptr->token_instance, tokens.tokeninstance,MAX_INSTANCE_TOKEN );
         P-> left = F_tk_ptr;
 
@@ -276,6 +279,7 @@ node_t* F(){
 
         node_t* F_tk_ptr_2 = createNode(' ');
         F_tk_ptr_2 -> token_id = strdup(tokenNames[tokens.tokenid]);  //getting token id
+        F_tk_ptr_2->token_ID = tokens.tokenid; //this is for the semantics check
         strncpy(F_tk_ptr_2->token_instance, tokens.tokeninstance,MAX_INSTANCE_TOKEN );
         P-> left = F_tk_ptr_2;
 
