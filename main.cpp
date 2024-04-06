@@ -77,7 +77,7 @@ int main(int argc, char* argv[]){
 
     printf("printing from semantics \n");
 
-    pre-order-traversal(root, 0);
+    pre_order_traversal(root, 0);
 
     // Free the memory allocated for the
     freeNode(root);
