@@ -5,6 +5,6 @@
 #ifndef P3_SEMANTICS_H
 #define P3_SEMANTICS_H
 
-void pre-order-traversal(node_t* root, char Label);
+void pre-order-traversal(node_t* root, int );
 
 #endif //P3_SEMANTICS_H
