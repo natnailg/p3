@@ -6,13 +6,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "semantics.h"
 
+#include "semantics.h"
 #include "TreeNode.h"
 
 const int max_size_table = 20;
 char table_array[max_size_table];
 bool  string_check = false;
+
+struct Token tokens;
 //steps
 // 1. lets first just travers it all
 // 2. store in the array
@@ -25,11 +27,11 @@ void pre_order_traversal(node_t* root, int depth){
 //        printf("%*c %s, %s\n", depth * 3, ' ', root->token_id, root->token_instance);
 
         // we need to see if we encounter t1 and t2 toknes in the tree
-        if(root->token_id == 1){
+        if(root->token_id == "T1 token"){
             printf("%%s, %s\n",  root->token_id, root->token_instance);
-
         }
-        else if (root->token_id == 2){
+
+        else if (root->token_id == "T2 token"){
             printf("%s, %s\n", root->token_id, root->token_instance);
 
         }
