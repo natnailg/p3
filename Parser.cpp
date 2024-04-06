@@ -258,7 +258,7 @@ node_t* E(){
     }else{ printf("E1. ERROR\n");return NULL;}
 }
 //
-// F-> t1 | t2 (first set of F = t1 | t2)
+// F-> t1 | t2 (first set of F = t1 | t2)//
 node_t* F(){
 
     node_t* P = createNode('F'); //create node E
