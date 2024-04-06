@@ -27,10 +27,13 @@ void pre_order_traversal(node_t* root, int depth){
     else{
         printf("lables: %c\n", root->Label);
     }
-// Recursively traverse left subtree
+
+    // Recursively traverse left, center, right, far_right subtree
     pre_order_traversal(root->left, depth + 1);
 
+    pre_order_traversal(root->center, depth + 1);
     // Recursively traverse right subtree
     pre_order_traversal(root->right, depth + 1);
 
+    pre_order_traversal(root->far_right, depth + 1);
 }
