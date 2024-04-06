@@ -4,6 +4,7 @@
 
 #ifndef P3_SEMANTICS_H
 #define P3_SEMANTICS_H
+#include "TreeNode.h"
 
 void pre_order_traversal(node_t* root, int );
 
