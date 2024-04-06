@@ -74,6 +74,9 @@ int main(int argc, char* argv[]){
     //print the inorder tree
     print_preorder_tree(root, 0);  //printing the tree depth is 0
 
+    printf("printing from semantics \n");
+
+    pre-order-traversal(root, 0);
 
     // Free the memory allocated for the
     freeNode(root);
