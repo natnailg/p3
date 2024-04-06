@@ -17,7 +17,7 @@ bool  string_check = false;
 // 1. lets first just travers it all
 // 2. use boolean when find same one
 // 3. insert them into the table/array
-void pre-order-traversal(node_t* root, int depth){
+void pre_order_traversal(node_t* root, int depth){
     if (root == NULL) {return;}
 
     if (root->Label == ' '){
