@@ -14,7 +14,6 @@ const int max_size_table = 20;
 char table_array[max_size_table];
 bool  string_check = false;
 
-struct Token tokens;
 //steps
 // 1. lets first just travers it all
 // 2. store in the array
