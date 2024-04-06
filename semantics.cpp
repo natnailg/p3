@@ -6,7 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#incude "semantics.h"
+#include "semantics.h"
 
 #include "TreeNode.h"
 
