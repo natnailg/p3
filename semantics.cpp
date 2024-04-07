@@ -40,6 +40,7 @@ void pre_order_traversal(node_t* root, int depth){
 
             if(!string_check && !t2_found) {
                 input_into_memory(root);
+                t2_found = true;
 
             }
         }else{
