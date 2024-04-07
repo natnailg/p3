@@ -72,6 +72,7 @@ void input_into_memory(node_t* identifier){
 
 
 }
+
 /// function to check if it is already in the symbols table or not
 bool Table_check(node_t* identifier){
     int result;
@@ -85,16 +86,10 @@ bool Table_check(node_t* identifier){
 //            printf("1--%s -- %s --\n", );
             return string_check;
 
-        }else{
-            printf("It is not declared in the table %s\n", identifier->token_instance);
-            string_check = false;
-            return string_check;
         }
     }
-//    printf("It is not declared in the table %s\n", identifier->token_instance);
-//    string_check = false;
-//
-//    return string_check;
+    printf("It is not declared in the table %s\n", identifier->token_instance);
+    string_check = false;
     return string_check;
 
 }
