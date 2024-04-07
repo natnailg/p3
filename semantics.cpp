@@ -30,19 +30,22 @@ void pre_order_traversal(node_t* root, int depth){
 
         if(root->token_ID == 1){
             input_into_memory(root);
-            printf("found a token %s, %s\n",  root->token_id, root->token_instance);
+            printf("token 1 found a token %s, %s\n",  root->token_id, root->token_instance);
 
         }
         else if (root->token_ID == 2){
             input_into_memory(root);
-            printf("found a token %s, %s\n", root->token_id, root->token_instance);
+            printf("token 2 found a token %s, %s\n", root->token_id, root->token_instance);
+        }else{
+            input_into_memory(root);
+            printf("symbols found a token %s, %s\n", root->token_id, root->token_instance);
 
         }
 
     }
-    else{
-        printf("lables: %c\n", root->Label);
-    }
+//    else{
+//        printf("lables: %c\n", root->Label);
+//    }
 
     // Recursively traverse left, center, right, far_right subtree
     pre_order_traversal(root->left, depth + 1);
