@@ -70,9 +70,8 @@ void input_into_memory(node_t* identifier){
 }
 //
 void memory_check_print() {
-    printf("memory filled with\n");
+    printf("Symbol Table\n");
     for (int i = 0; i < table_index; i++) {
-        printf("\tTable\n");
         printf("%d\t%s\n", i, table_array[i]);
     }
 }
