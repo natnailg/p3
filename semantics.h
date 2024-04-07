@@ -7,5 +7,5 @@
 #include "TreeNode.h"
 
 void pre_order_traversal(node_t* root, int );
-input_into_memory(node_t* root);
+void input_into_memory(node_t* root);
 #endif //P3_SEMANTICS_H
