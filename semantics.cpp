@@ -38,7 +38,7 @@ void pre_order_traversal(node_t* root, int depth){
 
             Table_check(root); //check
 
-            if(string_check && t2_found) {
+            if(!string_check) {
                 input_into_memory(root);
 
             }
@@ -78,14 +78,14 @@ bool Table_check(node_t* identifier){
     for (int i = 0; i < table_index; i++) {
         //strcmp(first_str, second_str );
         result = strcmp(table_array[i], identifier->token_instance);  // this means that it found it in the table
-        printf("\n%d\n", result );
         if (result == 0) { // if in the table
             printf("Already in the table table %s\n", table_array[i]);
             string_check = true;
+
 //            printf("1--%s -- %s --\n", );
             return string_check;
 
-        }else if (result > 0){
+        }else{
             printf("It is not declared in the table %s\n", identifier->token_instance);
             string_check = false;
 
