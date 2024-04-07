@@ -34,7 +34,7 @@ void pre_order_traversal(node_t* root, int depth){
         }
         else if (root->token_ID == 2){
             Table_check(root);
-            if(string_check) {
+            if(!string_check) {
                 input_into_memory(root);
             }
         }else{
