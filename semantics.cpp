@@ -86,6 +86,8 @@ bool Table_check(node_t* identifier){
 
         }
     }
+    printf("It is not declared in the table %s\n", identifier->token_instance);
+    string_check = false;
 
     return string_check;
 }
