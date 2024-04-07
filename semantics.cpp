@@ -34,8 +34,11 @@ void pre_order_traversal(node_t* root, int depth){
 
         }
         else if (root->token_ID == 2){
-            Table_check(root);
-            if(!string_check && t2_found) {
+            printf("2tk- %*c %s, %s\n", depth * 3, ' ', root->token_id, root->token_instance);
+
+            Table_check(root); //check
+
+            if(string_check && t2_found) {
                 input_into_memory(root);
 
             }
