@@ -70,7 +70,7 @@ void input_into_memory(node_t* identifier){
     memory_check_print(); //calling it to print.
 
 }
-//
+///
 void memory_check_print() {
     printf("memory filled with\n");
     for (int i = 0; i < table_index; i++) {
