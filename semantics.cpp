@@ -40,6 +40,7 @@ void pre_order_traversal(node_t* root, int depth){
 //            printf("token 2 found a token %s, %s\n", root->token_id, root->token_instance);
             }
         }else{
+            Table_check(root);
             if(!string_check) {
                 input_into_memory(root);
 //            printf("symbols found a token  %s\n", root->token_instance);
