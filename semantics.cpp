@@ -62,7 +62,7 @@ void pre_order_traversal(node_t* root, int depth) {
 void input_into_memory(node_t* identifier){
 
     if(table_index < max_size_table){
-//        char *strdup(const char *s);
+        //char *strdup(const char *s);
         table_array[table_index] = strdup(identifier->token_instance);
         table_index++;
     }
