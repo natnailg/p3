@@ -43,14 +43,13 @@ void pre_order_traversal(node_t* root, int depth){
                 t2_found = true;
 
             }
-        }else{
-            printf("Instances found %s\n", root->token_instance);
-        }
 
-    }
-//    else{
-//        printf("lables: %c\n", root->Label);
-//    }
+
+//        }else{
+//            printf("Instances found %s\n", root->token_instance);
+//        }
+
+        }
 
     // Recursively traverse left, center, right, far_right subtree
     pre_order_traversal(root->left, depth + 1);
@@ -89,8 +88,6 @@ bool Table_check(node_t* identifier){
         }else{
             printf("It is not declared in the table %s\n", identifier->token_instance);
             string_check = false;
-
-
             return string_check;
         }
     }
@@ -98,6 +95,8 @@ bool Table_check(node_t* identifier){
 //    string_check = false;
 //
 //    return string_check;
+    return string_check;
+
 }
 
 
