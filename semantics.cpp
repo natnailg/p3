@@ -59,14 +59,9 @@ void pre_order_traversal(node_t* root, int depth){
 
 
 void input_into_memory(node_t* identifier){
-    printf("entered the input_into_memory function \n");
 
     if(table_index < max_size_table){
-        printf("entered the if statement in the input_into_memory\n");
-//        char* strcpy(char* destination, const char* source);
-//        strcpy(table_array[table_index], identifier->token_instance);
 //        char *strdup(const char *s);
-
         table_array[table_index] = strdup(identifier->token_instance);
         table_index++;
     }
