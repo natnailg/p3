@@ -28,11 +28,11 @@ void pre_order_traversal(node_t* root, int depth) {
 //        printf("%*c %s, %s\n", depth * 3, ' ', root->token_id, root->token_instance);
 
         // we need to see if we encounter t1 and t2 toknes in the tree
-
         if (root->token_ID == 1) {
             printf("%*c %s, %s\n", depth * 3, ' ', root->token_id, root->token_instance);
 
-        } else if (root->token_ID == 2) {
+        }
+        else if (root->token_ID == 2) {
             printf("2tk- %*c %s, %s \n", depth * 3, ' ', root->token_id, root->token_instance);
 
             Table_check(root); //check
@@ -43,13 +43,8 @@ void pre_order_traversal(node_t* root, int depth) {
 
             }
 
-
-//        }else{
-//            printf("Instances found %s\n", root->token_instance);
-//        }
-
         }
-
+    }
         // Recursively traverse left, center, right, far_right subtree
         pre_order_traversal(root->left, depth + 1);
 
@@ -58,7 +53,7 @@ void pre_order_traversal(node_t* root, int depth) {
         pre_order_traversal(root->right, depth + 1);
 
         pre_order_traversal(root->far_right, depth + 1);
-    }
+
 }
 
 void input_into_memory(node_t* identifier){
@@ -81,8 +76,6 @@ bool Table_check(node_t* identifier){
         if (result == 0) { // if in the table
             printf("Already in the table table %s\n", table_array[i]);
             string_check = true;
-
-//            printf("1--%s -- %s --\n", );
             return string_check;
         }
     }
