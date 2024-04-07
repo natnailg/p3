@@ -29,17 +29,21 @@ void pre_order_traversal(node_t* root, int depth){
         // we need to see if we encounter t1 and t2 toknes in the tree
 
         if(root->token_ID == 1){
-            input_into_memory(root);
+            if(string_check) {
+                input_into_memory(root);
 //            printf("token 1 found a token %s, %s\n",  root->token_id, root->token_instance);
-
+            }
         }
         else if (root->token_ID == 2){
-            input_into_memory(root);
+            if(string_check) {
+                input_into_memory(root);
 //            printf("token 2 found a token %s, %s\n", root->token_id, root->token_instance);
+            }
         }else{
-            input_into_memory(root);
+            if(!string_check) {
+                input_into_memory(root);
 //            printf("symbols found a token  %s\n", root->token_instance);
-
+            }
         }
 
     }
@@ -76,11 +80,13 @@ bool Table_check(node_t* identifier){
         result = strcmp(table_array[i], identifier->token_instance);
         if (result == 0) {
             printf("Found it in the symbols table%s\n", table_array[i]);
-            return true;
+            string_check = true;
+            return string_check;
         }
     }
     printf("Doesn't exist in the table %s\n", identifier->token_instance);
-    return false;
+    string_check = false;
+    return string_check;
 }
 
 
