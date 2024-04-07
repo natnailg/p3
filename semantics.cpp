@@ -11,7 +11,7 @@
 #include "TreeNode.h"
 
 const int max_size_table = 20;
-char table_array[max_size_table];
+char* table_array[max_size_table];
 int table_index = 0;
 bool  string_check = false;
 
@@ -61,7 +61,9 @@ void input_into_memory(node_t* identifier){
     if(table_index < max_size_table){
         printf("entered the if statement in the input_into_memory\n");
 //        char* strcpy(char* destination, const char* source);
-        strcpy(table_array[table_index], identifier->token_instance);
+//        strcpy(table_array[table_index], identifier->token_instance);
+//        char *strdup(const char *s);
+        table_array[table_index] = strdup(identifier->token_instance);
         table_index++;
     }
 
