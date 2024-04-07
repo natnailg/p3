@@ -17,8 +17,8 @@ bool  string_check = false;
 
 //steps
 // 1. lets first just travers it all ----------------- DONE.
-// 2. store in the array -----------------------
-// 3. use boolean to check if it already exists
+// 2. store in the array -----------------------  DONE.
+// 3. use boolean to check if it already exists ---- verify.
 
 void pre_order_traversal(node_t* root, int depth){
     if (root == NULL) {return;}
@@ -68,10 +68,34 @@ void input_into_memory(node_t* identifier){
 
 
 }
-//
-void memory_check_print() {
+/// function to check if it is already in the symbols table or not
+bool Table_check(node_t* identifier){
+
+    for (int i = 0; i < table_index; i++) {
+        //strcmp(first_str, second_str );
+        result = strcmp(table_array[i], identifier->token_instance);
+        if (result == 0) {
+            printf("Found it in the symbols table%s\n", table_array[i]);
+            return true;
+        }
+    }
+    printf("Doesn't exist in the table %s\n", identifier->token_instance);
+    return false;
+}
+
+
+
+//memory print
+void Symbol_Table_print() {
     printf("Symbol Table\n");
     for (int i = 0; i < table_index; i++) {
         printf("%d\t%s\n", i, table_array[i]);
     }
 }
+
+
+
+
+//https://www.geeksforgeeks.org/strcpy-in-c/
+//https://www.geeksforgeeks.org/strdup-strdndup-functions-c/
+//https://www.geeksforgeeks.org/strcmp-in-c/    0 = str is identical >0 not matching

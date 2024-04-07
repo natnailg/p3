@@ -79,7 +79,7 @@ int main(int argc, char* argv[]){
 
     pre_order_traversal(root, 0);
 
-    memory_check_print(); //calling it to print the memory table.
+    Symbol_Table_print(); //calling it to print the memory table.
 
     // Free the memory allocated for the
     freeNode(root);

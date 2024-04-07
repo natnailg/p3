@@ -8,5 +8,6 @@
 
 void pre_order_traversal(node_t* root, int );
 void input_into_memory(node_t* root);
-void memory_check_print(); //testing if it in memory the tokens found.
+void Symbol_Table_print(); //printing the table.
+bool Table_check(node_t* identifier); // boolean check if it is already in memory
 #endif //P3_SEMANTICS_H
