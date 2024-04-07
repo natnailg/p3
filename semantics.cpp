@@ -34,7 +34,7 @@ void pre_order_traversal(node_t* root, int depth){
 
         }
         else if (root->token_ID == 2){
-            printf("2tk- %*c %s, %s\n", depth * 3, ' ', root->token_id, root->token_instance);
+            printf("2tk- %*c %s, %s %s  %s\n", depth * 3, ' ', root->token_id, root->token_instance, string_check, t2_found);
 
             Table_check(root); //check
 
@@ -79,18 +79,19 @@ bool Table_check(node_t* identifier){
         //strcmp(first_str, second_str );
         result = strcmp(table_array[i], identifier->token_instance);  // this means that it found it in the table
         if (result == 0) { // if in the table
-            printf("inserted into the table %s\n", table_array[i]);
+            printf("Already in the table table %s\n", table_array[i]);
             string_check = true;
 //            printf("1--%s -- %s --\n", );
             return string_check;
 
         }else{ // if not in the table
-            printf("It is not declared in the table %s\n", identifier->token_instance);
-            string_check = false;
-            t2_found = true;
 
         }
     }
+    printf("It is not declared in the table %s\n", identifier->token_instance);
+    string_check = false;
+    t2_found = true;
+
     printf("\n%s  %s %s\n", identifier->token_instance, string_check, t2_found);
     return string_check;
 }
