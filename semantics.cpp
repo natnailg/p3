@@ -41,6 +41,9 @@ void pre_order_traversal(node_t* root, int depth) {
                 input_into_memory(root);
                 t2_found = true;
 
+            }else{
+                printf("101: It is not declared in the table %s\n", identifier->token_instance);
+                exit(EXIT_FAILURE);
             }
 
         }
