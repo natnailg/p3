@@ -13,6 +13,7 @@
 const int max_size_table = 20;
 char* table_array[max_size_table];
 int table_index = 0;
+bool t2_found = false;
 bool  string_check = false;
 
 //steps
@@ -34,7 +35,7 @@ void pre_order_traversal(node_t* root, int depth){
         }
         else if (root->token_ID == 2){
             Table_check(root);
-            if(!string_check) {
+            if(!string_check && !t2_found) {
                 input_into_memory(root);
             }
         }else{
@@ -76,10 +77,12 @@ bool Table_check(node_t* identifier){
         if (result == 0) { // if in the table
             printf("inserted into the table %s\n", table_array[i]);
             string_check = true;
+            t2_found = true;
             return string_check;
+
         }else{ // if not in the table
             printf("It is not declared in the table %s\n", identifier->token_instance);
-//            string_check = false;
+            string_check = false;
         }
     }
 
