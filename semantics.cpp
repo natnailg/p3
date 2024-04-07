@@ -96,7 +96,7 @@ bool Table_check(node_t* identifier){
 
 
 //memory print
-void Symbol_Table_print() {f
+void Symbol_Table_print() {
     printf("Symbol Table\n");
     for (int i = 0; i < table_index; i++) {
         printf("%d\t%s\n", i, table_array[i]);
