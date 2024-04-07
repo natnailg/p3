@@ -29,21 +29,20 @@ void pre_order_traversal(node_t* root, int depth){
         // we need to see if we encounter t1 and t2 toknes in the tree
 
         if(root->token_ID == 1){
+            Table_check(root);
             if(string_check) {
                 input_into_memory(root);
-//            printf("token 1 found a token %s, %s\n",  root->token_id, root->token_instance);
             }
         }
         else if (root->token_ID == 2){
+            Table_check(root);
             if(string_check) {
                 input_into_memory(root);
-//            printf("token 2 found a token %s, %s\n", root->token_id, root->token_instance);
             }
         }else{
             Table_check(root);
             if(!string_check) {
                 input_into_memory(root);
-//            printf("symbols found a token  %s\n", root->token_instance);
             }
         }
 
