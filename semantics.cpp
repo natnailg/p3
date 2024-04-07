@@ -91,7 +91,7 @@ bool Table_check(node_t* identifier){
 
         }
     }
-
+    printf("\n%s\n", identifier->token_instance);
     return string_check;
 }
 
