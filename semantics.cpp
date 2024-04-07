@@ -21,24 +21,23 @@ bool  string_check = false;
 // 2. store in the array -----------------------  DONE.
 // 3. use boolean to check if it already exists ---- verify.
 
-void pre_order_traversal(node_t* root, int depth){
-    if (root == NULL) {return;}
+void pre_order_traversal(node_t* root, int depth) {
+    if (root == NULL) { return; }
 
-    if (root->Label == ' '){
+    if (root->Label == ' ') {
 //        printf("%*c %s, %s\n", depth * 3, ' ', root->token_id, root->token_instance);
 
         // we need to see if we encounter t1 and t2 toknes in the tree
 
-        if(root->token_ID == 1){
+        if (root->token_ID == 1) {
             printf("%*c %s, %s\n", depth * 3, ' ', root->token_id, root->token_instance);
 
-        }
-        else if (root->token_ID == 2){
+        } else if (root->token_ID == 2) {
             printf("2tk- %*c %s, %s \n", depth * 3, ' ', root->token_id, root->token_instance);
 
             Table_check(root); //check
 
-            if(!string_check && !t2_found) {
+            if (!string_check && !t2_found) {
                 input_into_memory(root);
                 t2_found = true;
 
@@ -51,16 +50,16 @@ void pre_order_traversal(node_t* root, int depth){
 
         }
 
-    // Recursively traverse left, center, right, far_right subtree
-    pre_order_traversal(root->left, depth + 1);
+        // Recursively traverse left, center, right, far_right subtree
+        pre_order_traversal(root->left, depth + 1);
 
-    pre_order_traversal(root->center, depth + 1);
-    // Recursively traverse right subtree
-    pre_order_traversal(root->right, depth + 1);
+        pre_order_traversal(root->center, depth + 1);
+        // Recursively traverse right subtree
+        pre_order_traversal(root->right, depth + 1);
 
-    pre_order_traversal(root->far_right, depth + 1);
+        pre_order_traversal(root->far_right, depth + 1);
+    }
 }
-
 
 void input_into_memory(node_t* identifier){
 
@@ -85,9 +84,9 @@ bool Table_check(node_t* identifier){
 
 //            printf("1--%s -- %s --\n", );
             return string_check;
-
         }
     }
+
     printf("It is not declared in the table %s\n", identifier->token_instance);
     string_check = false;
     return string_check;
@@ -97,7 +96,7 @@ bool Table_check(node_t* identifier){
 
 
 //memory print
-void Symbol_Table_print() {
+void Symbol_Table_print() {f
     printf("Symbol Table\n");
     for (int i = 0; i < table_index; i++) {
         printf("%d\t%s\n", i, table_array[i]);
