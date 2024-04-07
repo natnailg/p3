@@ -38,7 +38,7 @@ void pre_order_traversal(node_t* root, int depth){
 
             Table_check(root); //check
 
-            if(!string_check) {
+            if(!string_check && !t2_found) {
                 input_into_memory(root);
 
             }
@@ -88,6 +88,7 @@ bool Table_check(node_t* identifier){
         }else{
             printf("It is not declared in the table %s\n", identifier->token_instance);
             string_check = false;
+
 
             return string_check;
         }
