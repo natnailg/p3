@@ -72,6 +72,7 @@ void input_into_memory(node_t* identifier){
 void memory_check_print() {
     printf("memory filled with\n");
     for (int i = 0; i < table_index; i++) {
-        printf("%s\n", table_array[i]);
+        printf("\tTable\n")
+        printf("%d\t%s\n", i, table_array[i]);
     }
 }
