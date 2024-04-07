@@ -38,7 +38,7 @@ void pre_order_traversal(node_t* root, int depth){
                 input_into_memory(root);
             }
         }else{
-            printf("Instances found %s", root->token_instance);
+            printf("Instances found %s\n", root->token_instance);
         }
 
     }
