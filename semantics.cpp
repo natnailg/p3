@@ -65,7 +65,7 @@ void input_into_memory(node_t* identifier){
         table_array[table_index] = strdup(identifier->token_instance);
         table_index++;
     }
-    memory_check_print(); //calling it to print.
+
 
 }
 //
