@@ -70,7 +70,7 @@ void input_into_memory(node_t* identifier){
 }
 /// function to check if it is already in the symbols table or not
 bool Table_check(node_t* identifier){
-
+    int result;
     for (int i = 0; i < table_index; i++) {
         //strcmp(first_str, second_str );
         result = strcmp(table_array[i], identifier->token_instance);
