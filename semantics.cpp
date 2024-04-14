@@ -35,7 +35,8 @@ void pre_order_traversal(node_t* root, int depth) {
         else if (root->token_ID == 2) {
        // printf("2tk- %*c %s, %s \n", depth * 3, ' ', root->token_id, root->token_instance);
 
-            Table_check(root); //check
+            Table_check(root); //check table if it already exists
+
 
             if (!string_check && !t2_found) {
                 input_into_memory(root);
@@ -94,7 +95,7 @@ bool Table_check(node_t* identifier){
 
 
 //memory print
-void Symbol_Table_print() {
+void Static_semantic_print() {
     printf("Symbol Table\n");
     for (int i = 0; i < table_index; i++) {
         printf("%d\t%s\n", i, table_array[i]);
