@@ -77,7 +77,7 @@ bool Table_check(node_t* identifier){
         //strcmp(first_str, second_str );
         result = strcmp(table_array[i], identifier->token_instance);  // this means that it found it in the table
         if (result == 0) { // if in the table
-            printf("put in the array/check: %s\n", table_array[i]);
+            printf("Error: It is already declared in the table %s\n", root->token_instance);
             exit(EXIT_FAILURE);
          //printf("Already in the table table %s\n", table_array[i]);
             string_check = true;
