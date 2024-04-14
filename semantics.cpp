@@ -81,8 +81,8 @@ bool Table_check(node_t* identifier){
             printf("Error: It is already declared in the table %s\n", table_array[i]);
             exit(EXIT_FAILURE);
             //printf("Already in the table table %s\n", table_array[i]);
-//            string_check = true;
-//            return string_check;
+            // string_check = true;
+            //  return string_check;
         }
     }
 
