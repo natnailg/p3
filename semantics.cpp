@@ -104,7 +104,7 @@ void Static_semantic_print() {
 
 //https://www.geeksforgeeks.org/strcpy-in-c/
 //https://www.geeksforgeeks.org/strdup-strdndup-functions-c/
-//https://www.geeksforgeeks.org/strcmp-in-c/    0 = str is identical >0 not matching
+//https://www.geeksforgeeks.org/strcmp-in-c/ 0 = str is identical >0 not matching
 
 
 /*

@@ -79,7 +79,10 @@ node_t* parser(char* filename) {
 
     tokens = Scanner();
 
+    if (tokens.tokenid == T2_tk){
+        tokens.tokeninstance[0] = V;
 
+    }
     root = S(); // call FUNCTION S
 
     if(tokens.tokenid == EOFtk){
